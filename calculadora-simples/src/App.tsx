@@ -23,8 +23,8 @@ export default function Calculator() {
       <div className="w-50 m-auto d-flex flex-column pt-5">
         <h1>Calculadora Simples</h1>
         
-        <div className="d-flex row mx-0 mb-3">
-          <div className="col-6 pe-3 ps-0">
+        <div className="d-flex row mx-0 mb-3 align-items-center">
+          <div className="col-5 pe-3 ps-0">
             <label htmlFor="first-number" className="form-label">Algum número</label>
             <input type="number"
                   id="first-number" 
@@ -34,7 +34,11 @@ export default function Calculator() {
                   placeholder="Número 1"/>
           </div>
 
-          <div className="col-6 ps-3 pe-0 mx-0">
+          <div className="col-2 mt-4">
+            <p className="mb-0 text-center">{ operation }</p> 
+          </div>
+
+          <div className="col-5 ps-3 pe-0 mx-0">
             <label htmlFor="second-number" className="form-label">Outro número</label>
             <input type="number"
                    value={secondNumber}
