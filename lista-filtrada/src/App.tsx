@@ -4,7 +4,6 @@ import ListItems from './ListItems';
 
 function App() {
   const [filter, setFilter] = useState("");
-  const [testChangeState, setTestChangeState] = useState(false);
   const items: string[] = ["Fiat", "Volkswagen", "Chevrolet", "Ford", "Renault", "Peugeot", "Citroën", "Honda", "Toyota", "Hyundai", "Nissan", "Jeep", "BMW", "Mercedes-Benz", "Mitsubishi"];
 
   const itemsToShow = useMemo(() => {
@@ -16,9 +15,7 @@ function App() {
       <div className='content w-25'>
         <h1 className='display-5'>Lista filtrada</h1>  
         <label className='form-label' htmlFor="input">Filtrar por</label>
-        <input className='form-control' type="text" id='input' value={filter} onChange={(element) => setFilter(element.target.value)}/>
-
-        <button className='btn btn-outline-primary' onClick={() => setTestChangeState(!testChangeState)}> clicar </button>
+        <input className='form-control' autoComplete='off' type="text" id='input' value={filter} onChange={(element) => setFilter(element.target.value)}/>
 
         <ListItems itemsToShow={itemsToShow}/>
       </div>
